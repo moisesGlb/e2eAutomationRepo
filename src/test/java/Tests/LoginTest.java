@@ -18,8 +18,8 @@ public class LoginTest extends BaseTest {
 
     @BeforeMethod
     public void methodLevelSetup(){
-        loginPage = new LoginPage(driver);
-        homePage = new HomePage(driver);
+        loginPage = new LoginPage(super.getDriver());
+        homePage = new HomePage(super.getDriver());
     }
 
     /**
