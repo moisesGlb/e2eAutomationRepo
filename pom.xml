@@ -14,6 +14,7 @@
     </properties>
 
     <dependencies>
+        <!-- Selenium dependency -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
@@ -21,6 +22,7 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Test ng dependency -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -28,6 +30,20 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Excel RW dependency -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>4.1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.11</version>
+        </dependency>
+
+        <!-- Reports dependencies -->
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
@@ -52,6 +68,7 @@
             <version>1.5.4</version>
         </dependency>
 
+        <!-- Driver Manager dependency -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>

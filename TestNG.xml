@@ -9,6 +9,7 @@
         <parameter name="browser" value="Firefox" />
         <classes>
             <class name="Tests.LoginTest"/>
+            <class name="Tests.CustomerTest"/>
         </classes>
     </test>
 
@@ -16,6 +17,7 @@
         <parameter name="browser" value="Chrome" />
         <classes>
             <class name="Tests.LoginTest"/>
+            <class name="Tests.CustomerTest"/>
         </classes>
     </test>
 </suite>

@@ -1,6 +1,6 @@
 package object;
 
-import entities.Customer;
+import Utils.Utilities;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class AddNewCustomerPage {
     private WebDriver driver;
+    private Utilities.Utilidades utilidades;
 
     @FindBy(css = "p.heading3")
     public WebElement newCustomerTitle;
@@ -146,18 +147,18 @@ public class AddNewCustomerPage {
     }
 
 
-    public void addNewCustomer(Customer customer){
+    public void addNewCustomer(String name, boolean gender, String birthDate, String address, String city, String state,String phoneNumber, String pin){
         clickReset();
-        enterCustomerName(customer.getName());
-        selectGender(customer.isGender());
-        selectBirthDate(customer.getBirthDate());
-        enterCustomerAddress(customer.getAddress());
-        enterCustomerCity(customer.getCity());
-        enterCustomerState(customer.getState());
-        enterCustomerPin(customer.getPIN());
-        enterCustomerPhone(customer.getPhoneNumber());
-        enterCustomerEmail(customer.getEmail());
-        enterCustomerPassword(customer.getPswd());
+        enterCustomerName(name);
+        selectGender(gender);
+        selectBirthDate(birthDate);
+        enterCustomerAddress(address);
+        enterCustomerCity(city);
+        enterCustomerState(state);
+        enterCustomerPin(pin);
+        enterCustomerPhone(phoneNumber);
+        enterCustomerEmail(utilidades.generateEmail(name));
+        enterCustomerPassword("Test1234");
         clickSubmit();
     }
 
