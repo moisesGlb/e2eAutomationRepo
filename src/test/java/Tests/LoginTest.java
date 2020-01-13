@@ -6,7 +6,6 @@ import object.HomePage;
 import object.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 @Epic("Login")
@@ -22,13 +21,6 @@ public class LoginTest extends BaseTest {
         homePage = new HomePage(super.getDriver());
     }
 
-    /**
-     * This test case will login in http://demo.guru99.com/V4/
-     * Verify login page title as guru99 bank
-     * Login to application
-     * Verify the home page using Dashboard message
-     */
-    @Ignore
     @Test(priority = 2, dataProvider = "loginTest", dataProviderClass = DataProviderClass.class)
     @Severity(SeverityLevel.BLOCKER)
     @Description("We validate a successfull login with valid credentials")
@@ -38,7 +30,6 @@ public class LoginTest extends BaseTest {
         Assert.assertTrue(homePage.getLoginTitle().toLowerCase().contains(user));
     }
 
-    @Ignore
     @Test(priority = 1)
     @Severity(SeverityLevel.NORMAL)
     @Description("In this test we validate that when we left the input fields from pwd and user 2 warnings should show")

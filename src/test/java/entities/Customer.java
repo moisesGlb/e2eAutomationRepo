@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Customer {
 
 
-    private Utilities.Utilidades utilidades;
+    private Utilities utilidades;
     private String name;
     private boolean gender;
     private String birthDate;
@@ -34,15 +34,15 @@ public class Customer {
 
     public Customer(ArrayList<String> lista) {
         this.name = lista.get(0);
-        if (lista.get(1).equalsIgnoreCase("false"))this.gender = false;
-        else this.gender = true;
+        if (lista.get(1).equalsIgnoreCase("false")){this.gender = false;}
+        else { this.gender = true; }
         this.birthDate = lista.get(2);
         this.address = lista.get(3);
         this.city = lista.get(4);
         this.state = lista.get(5);
-        this.phoneNumber = lista.get(6);
-        this.pin = lista.get(7);
-        this.email = "";
+        this.phoneNumber = lista.get(7);
+        this.pin = lista.get(6);
+        this.email = "thisIsAtest@gmail.com";
         this.password = "Test1234";
     }
 

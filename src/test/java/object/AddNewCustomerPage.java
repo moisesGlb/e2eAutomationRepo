@@ -9,10 +9,10 @@ import org.openqa.selenium.support.PageFactory;
 
 public class AddNewCustomerPage {
     private WebDriver driver;
-    private Utilities.Utilidades utilidades;
+    private Utilities utilidades = new Utilities();
 
     @FindBy(css = "p.heading3")
-    public WebElement newCustomerTitle;
+    public WebElement customerTitle;
 
     @FindBy(xpath = "//input[@name='name']")
     public WebElement customerName;
@@ -77,8 +77,12 @@ public class AddNewCustomerPage {
     @FindBy(xpath = "//input[@name='sub']")
     public WebElement submitButton;
 
-    @FindBy(xpath = "//input[@name='res']")
+    @FindBy(xpath="//input[@name='res']")
     public WebElement resetButton;
+
+
+    @FindBy(css = "tr:nth-child(4) td:nth-child(2)")
+    public WebElement customerId;
 
     public AddNewCustomerPage(WebDriver driver) {
         this.driver = driver;
