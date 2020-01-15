@@ -3,19 +3,8 @@ package Utils;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
-import java.util.Random;
 
 public class Utilities {
-
-    private Random rand = new Random();
-    private FileHandler fileHandler;
-
-    public String generateEmail(String name) {
-        if (name.contains(" ")) {
-            String[] arrOfStr = name.split(" ");
-            return arrOfStr[0] + "." + arrOfStr[arrOfStr.length - 1] + "@testmail.com";
-        } else return name + "@testmail.com";
-    }
 
     public String getJiraId(String jiraId) {
         if (jiraId.contains("JIRA")) {

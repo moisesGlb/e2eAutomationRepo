@@ -17,7 +17,6 @@ public class DataProviderClass {
     @DataProvider(name="newUsers")
     public static Object[][] getDataFromDataprovider(Method method)throws IOException {
         String ID = util.getJiraId(method.getName());
-
         return new Object[][]{ {new Customer(fileHandler.listReadExcel(e2eConstants.FILE_PATH,
                                                                        e2eConstants.FILE_NAME,
                                                                        e2eConstants.NEW_USERS_SHEET_NAME, ID))}};

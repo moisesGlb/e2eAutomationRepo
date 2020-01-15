@@ -4,7 +4,7 @@ This Repo is part of a traning excersise. I'm trying to create a repo with autom
 
   - Maven
   - Java
-  - Selenium (page object and page factory)
+  - Selenium (page pages and page factory)
   - Excel (Data provider)
   - Linked to Jira (coming soon)
   - Allure
