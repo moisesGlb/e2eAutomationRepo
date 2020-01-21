@@ -93,9 +93,10 @@ public class Customer {
     }
 
     private String generateEmail(String name) {
-        if (name.contains(" ")) {
-            String[] arrOfStr = name.split(" ");
+        String name2work = name.toLowerCase();
+        if (name2work.contains(" ")) {
+            String[] arrOfStr = name2work.split(" ");
             return arrOfStr[0] + "." + arrOfStr[arrOfStr.length - 1] + "@testmail.com";
-        } else return name + "@testmail.com";
+        } else return name2work + "@testmail.com";
     }
 }

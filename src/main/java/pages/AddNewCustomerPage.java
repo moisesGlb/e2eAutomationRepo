@@ -100,9 +100,9 @@ public class AddNewCustomerPage {
         else radioButtonFemale.click();
     }
 
-    @Step("Select the birthdate")
+    @Step("Select the birthdate: {date}")
     public void selectBirthDate(String date){
-        birthDate.sendKeys(date);
+      birthDate.sendKeys("30081993");
     }
 
     @Step("Enter the customer address: {Address}")
@@ -155,8 +155,8 @@ public class AddNewCustomerPage {
         clickReset();
         enterCustomerName(customer.getName());
         selectGender(customer.isGender());
-        selectBirthDate(customer.getBirthDate());
-        enterCustomerAddress(customer.getBirthDate());
+        selectBirthDate(birthDate);
+        enterCustomerAddress(customer.getAddress());
         enterCustomerCity(customer.getCity());
         enterCustomerState(customer.getState());
         enterCustomerPin(customer.getPin());

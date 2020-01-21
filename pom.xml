@@ -47,7 +47,7 @@
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
-            <version>3.11</version>
+            <version>4.1.1</version>
         </dependency>
 
         <!-- Reports dependencies -->
@@ -75,13 +75,6 @@
             <version>1.5.4</version>
         </dependency>
 
-        <!-- Headless Browser-->
-        <!-- https://mvnrepository.com/artifact/com.github.detro.ghostdriver/phantomjsdriver -->
-        <dependency>
-            <groupId>com.github.detro.ghostdriver</groupId>
-            <artifactId>phantomjsdriver</artifactId>
-            <version>1.1.0</version>
-        </dependency>
     </dependencies>
 
     <build>

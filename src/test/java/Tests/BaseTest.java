@@ -32,7 +32,6 @@ public class BaseTest {
     public void classLevelSetup(String browser) throws Exception {
         utils = new Utilities();
         properties = utils.readFromProperties();
-
         if (browser.equalsIgnoreCase("Firefox")) {
             System.setProperty("webdriver.gecko.driver", PROJECT_PATH + properties.getProperty("gecko.path"));
             driver = new FirefoxDriver();
@@ -44,7 +43,6 @@ public class BaseTest {
             Log.error("Browser is not correct");
             throw new Exception("Browser is not correct");
         }
-
 
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

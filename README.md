@@ -1,13 +1,13 @@
 # E2E Automation Test Example
 
-This Repo is part of a traning excersise. I'm trying to create a repo with automatic reports, executed on a pipeline, linked to stories/issues, executed with multibrowser, etc.
+We use the guru99 bank free training [page](http://demo.guru99.com/v4/). 
+This Repo is part of a training exercise. I'm trying to create a repo with automatic reports, executed on a pipeline, linked to stories/issues, executed with multi browser, etc.
 
   - Maven
-  - Java
-  - Selenium (page pages and page factory)
+  - Java (8)
+  - Selenium (page object and page factory)
   - Excel (Data provider)
-  - Linked to Jira (coming soon)
-  - Allure
+  - Allure reports
   
 # Pre Requisites
 

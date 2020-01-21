@@ -3,6 +3,7 @@ package Tests;
 
 import Utils.Data.DataProviderClass;
 import Utils.Data.DataUpdater;
+import Utils.Log;
 import entities.Customer;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
@@ -37,19 +38,20 @@ public class CustomerTest extends BaseTest {
     }
 
 
-    @Test(priority = 1, dataProvider = "newUsers", dataProviderClass = DataProviderClass.class)
+    @Test(priority = 8, dataProvider = "newUsers", dataProviderClass = DataProviderClass.class)
     @Severity(SeverityLevel.CRITICAL)
     @Description("We validate that a new customer is successfully added")
     @Story("Add new Customer")
     public void JIRA7153_AddNewCustomer_ValidData(Customer customer) throws InterruptedException
     {
+
         loginPage.LoginToHomeBanking(properties.getProperty("mngr.user"),properties.getProperty("mngr.pass"));
         sideMenu.clicOnNewCustomer();
         wait.until(ExpectedConditions.visibilityOf(addNewCustomerPage.customerTitle));
+        Log.info("the address obtained is: "+customer.getAddress());
         addNewCustomerPage.addNewCustomer(customer.getName(),customer.isGender(),customer.getBirthDate(),customer.getAddress(),customer.getCity(),customer.getState(),customer.getPhoneNumber(),customer.getPin());
         if (super.isAlertPresent(super.getDriver())){
             String error = "Failed Test, Unexpected alert shown: "+super.getDriver().switchTo().alert().getText();
-            //Log.error(error);
             Assert.fail(error);
         }else {
             wait.until(ExpectedConditions.visibilityOf(succesCustomerPage.customerTitle));

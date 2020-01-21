@@ -84,7 +84,4 @@ public class TestListener extends BaseTest implements ITestListener {
         return iTestResult.getMethod().getConstructorOrMethod().getName();
     }
 
-    private static void updateTestData(String testName,String testData){
-
-    }
 }
